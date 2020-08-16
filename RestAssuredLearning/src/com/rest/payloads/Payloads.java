@@ -1,6 +1,7 @@
 package com.rest.payloads;
 
 public class Payloads {
+	
 	public static String addPlace() {
 		return ("{\r\n" + 
 				"  \"location\": {\r\n" + 
@@ -19,5 +20,14 @@ public class Payloads {
 				"  \"language\": \"French-IN\"\r\n" + 
 				"}\r\n" + 
 				"");
-	} 
+	}
+	
+	public static String updatePlace(String placeId) {
+		return ("{\r\n" + 
+				"\"place_id\":\""+ placeId +"\",\r\n" + 
+				"\"address\":\"70 winter walk, USA\",\r\n" + 
+				"\"key\":\"qaclick123\"\r\n" + 
+				"}\r\n" + 
+				"");
+	}
 }
