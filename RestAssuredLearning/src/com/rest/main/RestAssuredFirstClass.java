@@ -31,6 +31,15 @@ public class RestAssuredFirstClass {
 		
 		System.out.println("Update Response begins here ...................\n" + updateResponse);
 		
+		String getResponse = given().log().all().queryParam("key", "qaclick123").queryParam("place_id", placeId).header("Content-Type","application/json").when()
+		.get("/maps/api/place/get/json").then().statusCode(200).extract().response().asString();
+		
+		System.out.println("Get Response begins here ......................\n" + getResponse);
+		JsonPath jsonPathGet = new JsonPath(getResponse);
+		String address = jsonPathGet.getString("address");
+		System.out.println("Get response contains Address value as :: " + address);
+		
+		
 		
 	}
 	
