@@ -30,4 +30,10 @@ public class Payloads {
 				"}\r\n" + 
 				"");
 	}
+	
+	public static String deletePlace(String placeId) {
+		return ("{\r\n" + 
+				"    \"place_id\":\"" + placeId + "\"}\r\n" + 
+				"");
+	}
 }
