@@ -36,4 +36,14 @@ public class Payloads {
 				"    \"place_id\":\"" + placeId + "\"}\r\n" + 
 				"");
 	}
+	
+	public static String addBookToLibrary(String bookAisle) {
+		return ("{\r\n" + 
+				"\"name\":\"Learn Appium Automation with Java\",\r\n" + 
+				"\"isbn\":\"bcd\",\r\n" + 
+				"\"aisle\":\""+ bookAisle +"\",\r\n" + 
+				"\"author\":\"John foe\"\r\n" + 
+				"}\r\n" + 
+				"");
+	}
 }
