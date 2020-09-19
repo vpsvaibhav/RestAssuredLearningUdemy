@@ -1,5 +1,8 @@
 package com.rest.payloads;
 
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 public class Payloads {
 	
 	public static String addPlace() {
@@ -37,13 +40,21 @@ public class Payloads {
 				"");
 	}
 	
-	public static String addBookToLibrary(String bookAisle) {
+	public static String addBookToLibrary(String bookAisle, String isbnNumber) {
 		return ("{\r\n" + 
 				"\"name\":\"Learn Appium Automation with Java\",\r\n" + 
-				"\"isbn\":\"bcd\",\r\n" + 
+				"\"isbn\":\"" + isbnNumber + "\",\r\n" + 
 				"\"aisle\":\""+ bookAisle +"\",\r\n" + 
 				"\"author\":\"John foe\"\r\n" + 
 				"}\r\n" + 
 				"");
+	}
+	
+	public static String generateResourceFromFile (String filePath) {
+		try {
+			return new String (Files.readAllBytes(Paths.get(filePath)));
+		} catch (Exception e) {
+			return null;
+		} 
 	}
 }
