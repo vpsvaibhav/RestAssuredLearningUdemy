@@ -1,4 +1,4 @@
-package com.rest.payloads;
+package payloads;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;

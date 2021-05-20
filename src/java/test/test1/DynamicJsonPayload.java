@@ -1,10 +1,10 @@
-package com.rest.main;
+package test1;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.rest.helper.RawToJson;
-import com.rest.payloads.Payloads;
+import helper.RawToJson;
+import payloads.Payloads;
 
 import static io.restassured.RestAssured.*;
 import io.restassured.RestAssured;

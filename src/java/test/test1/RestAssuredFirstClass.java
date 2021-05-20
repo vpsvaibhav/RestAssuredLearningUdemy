@@ -1,12 +1,10 @@
-package com.rest.main;
+package test1;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 
 import static io.restassured.RestAssured.*;
-import static org.hamcrest.Matchers.*;
-
-import com.rest.payloads.Payloads;
+import payloads.Payloads;
 
 public class RestAssuredFirstClass {
 
@@ -16,7 +14,8 @@ public class RestAssuredFirstClass {
 		// Add API  
 		String addResponse = given().log().all().queryParam("key", "qaclick123").header("Content-Type","application/json")
 		.body(Payloads.addPlace()).when().post("/maps/api/place/add/json")
-		.then().assertThat().statusCode(200).body("scope", equalTo("APP"))
+		.then().assertThat().statusCode(200)                                            
+		/*body("scope", equalTo("APP"))*/
 		.header("server", "Apache/2.4.18 (Ubuntu)").extract().response().asString();
 		
 		System.out.println("Add Response begins here ...................\n" + addResponse);
@@ -29,7 +28,9 @@ public class RestAssuredFirstClass {
 		// Update API
 		String updateResponse = given().log().all().queryParam("key", "qaclick123").header("Content-Type","application/json")
 		.body(Payloads.updatePlace(placeId)).when().put("/maps/api/place/update/json")
-		.then().assertThat().statusCode(200).body("msg",equalTo("Address successfully updated")).extract().response().asString();
+		.then().assertThat().statusCode(200).
+		/*body("msg",equalTo("Address successfully updated"))*/
+		extract().response().asString();
 		
 		System.out.println("Update Response begins here ...................\n" + updateResponse);
 		
@@ -45,7 +46,9 @@ public class RestAssuredFirstClass {
 		
 		// DELETE API
 		String deleteResponse = given().queryParam("key", "qaclick123").header("Content-Type","application/json").body(Payloads.deletePlace(placeId))
-		.when().delete("/maps/api/place/delete/json").then().statusCode(200).body("status", equalTo("OK")).extract().response().asString();
+		.when().delete("/maps/api/place/delete/json").then().statusCode(200).
+		/*body("status", equalTo("OK")).*/
+		extract().response().asString();
 		
 		System.out.println("Delete Response begins here .................\n "+ deleteResponse);
 		

@@ -1,5 +1,5 @@
 
-package com.rest.helper;
+package helper;
 
 import io.restassured.path.json.JsonPath;
 
