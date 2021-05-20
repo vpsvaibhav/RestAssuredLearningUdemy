@@ -48,7 +48,7 @@ public class RestAssuredFirstClass {
 		// DELETE API
 		String deleteResponse = given().queryParam("key", "qaclick123").header("Content-Type","application/json").body(Payloads.deletePlace(placeId))
 		.when().delete("/maps/api/place/delete/json").then().statusCode(200).
-		/*body("status", equalTo("OK")).*/
+		body("status", equalTo("OK")).
 		extract().response().asString();
 		
 		System.out.println("Delete Response begins here .................\n "+ deleteResponse);
