@@ -4,6 +4,7 @@ import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 
 import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
 import payloads.Payloads;
 
 public class RestAssuredFirstClass {
@@ -14,8 +15,8 @@ public class RestAssuredFirstClass {
 		// Add API  
 		String addResponse = given().log().all().queryParam("key", "qaclick123").header("Content-Type","application/json")
 		.body(Payloads.addPlace()).when().post("/maps/api/place/add/json")
-		.then().assertThat().statusCode(200)                                            
-		/*body("scope", equalTo("APP"))*/
+		.then().assertThat().statusCode(200).                                            
+		body("scope", equalTo("APP"))
 		.header("server", "Apache/2.4.18 (Ubuntu)").extract().response().asString();
 		
 		System.out.println("Add Response begins here ...................\n" + addResponse);
@@ -29,8 +30,8 @@ public class RestAssuredFirstClass {
 		String updateResponse = given().log().all().queryParam("key", "qaclick123").header("Content-Type","application/json")
 		.body(Payloads.updatePlace(placeId)).when().put("/maps/api/place/update/json")
 		.then().assertThat().statusCode(200).
-		/*body("msg",equalTo("Address successfully updated"))*/
-		extract().response().asString();
+		body("msg",equalTo("Address successfully updated"))
+		.extract().response().asString();
 		
 		System.out.println("Update Response begins here ...................\n" + updateResponse);
 		
