@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-05-21T20:18:55 IST" name="Default suite" finished-at="2021-05-21T20:19:00 IST" duration-ms="5037">
+    <groups>
+    </groups>
+    <test started-at="2021-05-21T20:18:55 IST" name="Default test" finished-at="2021-05-21T20:19:00 IST" duration-ms="5037">
+      <class name="test1.ComplexJsonParse">
+        <test-method signature="verifyCourseSize()[pri:0, instance:test1.ComplexJsonParse@12d4bf7e]" started-at="2021-05-21T20:18:55 IST" name="verifyCourseSize" finished-at="2021-05-21T20:18:58 IST" duration-ms="3655" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCourseSize -->
+        <test-method signature="verifyFirstCourseTitle()[pri:0, instance:test1.ComplexJsonParse@12d4bf7e]" started-at="2021-05-21T20:18:58 IST" name="verifyFirstCourseTitle" finished-at="2021-05-21T20:18:59 IST" duration-ms="169" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFirstCourseTitle -->
+        <test-method signature="verifyPurchaseAmount()[pri:0, instance:test1.ComplexJsonParse@12d4bf7e]" started-at="2021-05-21T20:18:59 IST" name="verifyPurchaseAmount" finished-at="2021-05-21T20:18:59 IST" duration-ms="61" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPurchaseAmount -->
+        <test-method signature="verifyPurchaseAmountwithBooksSelling()[pri:0, instance:test1.ComplexJsonParse@12d4bf7e]" started-at="2021-05-21T20:18:59 IST" name="verifyPurchaseAmountwithBooksSelling" finished-at="2021-05-21T20:18:59 IST" duration-ms="425" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPurchaseAmountwithBooksSelling -->
+        <test-method signature="verifyRPACoursePrice()[pri:0, instance:test1.ComplexJsonParse@12d4bf7e]" started-at="2021-05-21T20:18:59 IST" name="verifyRPACoursePrice" finished-at="2021-05-21T20:18:59 IST" duration-ms="245" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRPACoursePrice -->
+        <test-method signature="verifyTitlesAndPrices()[pri:0, instance:test1.ComplexJsonParse@12d4bf7e]" started-at="2021-05-21T20:18:59 IST" name="verifyTitlesAndPrices" finished-at="2021-05-21T20:19:00 IST" duration-ms="327" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitlesAndPrices -->
+      </class> <!-- test1.ComplexJsonParse -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
